@@ -1,0 +1,317 @@
+/* Header */
+
+.app-header {
+    height: 1rem;
+    width: 100%;
+    user-select: none;
+}
+
+.app-header > .app-title {
+    color: var(--font-color);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    width: var(--server-list-width);
+}
+
+/* Content */
+
+.content {
+    width: 100%;
+    height: calc(100% - 1rem);
+    display: grid;
+    grid-template-columns: var(--server-list-width) var(--server-interface-column) auto;
+}
+
+
+/* ServersList */
+
+.servers-list {
+    width: var(--server-list-width);
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.server-icon {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 100%;
+    background: var(--chat-color);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.server-icon:hover {
+    border-radius: 35%;
+}
+
+.server-icon.private
+{
+    margin: 0.4rem 0;
+    position: relative;
+}
+
+.server-icon.private:hover
+{
+    background: var(--discord-violet);
+}
+
+.server-icon::before {
+    content: '';
+    /*height: 70%; ACTIVE */
+    height: 0%;
+    width: 6px;
+    position: absolute;
+    top: 50%;
+    left: -22%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 20px;
+
+}
+
+.server-icon:hover::before {
+    height: 40%;
+    transition: all 0.1s ease;
+}
+
+.server-icon.add-server::before {
+    height: 0%;
+}
+
+.server-icon.private::after {
+    content: '';
+    width: 65%;
+    height: 2px;
+    background: var(--chat-color);
+    position: absolute;
+    bottom: -0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.server-icon.private .logo {
+    color: var(--logo-color);
+    font-size: 1.6rem;
+}
+
+.server-icon.bottom-button {
+    display: block;
+}
+
+.my-servers {
+    margin-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottom-button > .icon {
+    color: var(--discord-green);
+    font-size: 1.4rem;
+}
+
+.bottom-button:hover .icon {
+    color: #fff;
+}
+
+.bottom-button:hover {
+    background: var(--discord-green);
+}
+
+/* Chats */
+
+.chats {
+    height: 100%;
+    background: var(--list-color);
+    width: var(--server-interface-column);
+}
+
+.message-search {
+    height: var(--top-content-row-height);
+    border-bottom: 1px var(--main) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-search > .search-input {
+    width: 90%;
+    height: 60%;
+    background: var(--main);
+    border: 0px;
+    border-radius: 5px;
+    color: var(--font-color);
+    text-align: start;
+    padding: 0 10px;
+    font-weight: b;
+    cursor: pointer;
+}
+
+.chats > .option-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.chats > .option-list
+{
+    color: var(--font-color);
+    padding: 10px;
+    gap: 3px;
+}
+
+.option-list .option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2.3rem;
+    border-radius: 5px;
+    padding:8px;
+    gap: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.option-list .option p {
+    font-size: 1rem;
+}
+
+.option-list .option:hover {
+    background: var(--element-hover);
+    color: #fff;
+}
+
+.option-list .new-banner {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    font-size: 0.75rem;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 50px;
+    height: 22px;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,rgb(136, 74, 192), rgb(165, 89, 147));
+}
+
+.star {
+    position: absolute;
+}
+
+.star.left-star {
+    width: 10px;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+    }
+
+.star.right-star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 0;
+    transform: translateX(50%) translateY(-50%);
+    }
+
+:root {
+    --left-star-size: 5px;
+    --right-star-size: 7px;
+}
+
+.star::before,
+.star::after {
+    content: '';
+    background: #fff;
+    position: absolute;
+   
+}
+
+.star.left-star::before {
+    transform: rotate(45deg) skew(22.5deg, 22.5deg);
+    left: 2px;
+    bottom: 2px;
+    width: var(--left-star-size);
+    height: var(--left-star-size);
+    animation: left-star 4s infinite alternate-reverse;
+}
+
+.star.left-star::after {
+    left: 2px;
+    bottom: 2px;
+    width: var(--left-star-size);
+    height: var(--left-star-size);
+    transform: rotate(-45deg) skew(22.5deg, 22.5deg);
+    animation: left-star 4s infinite alternate-reverse;
+}
+
+.star.right-star::before {
+    transform: rotate(45deg) skew(22.5deg, 22.5deg);
+    right: 0;
+    top: 0;
+    width: var(--right-star-size);
+    height: var(--right-star-size);
+}
+
+.star.right-star::after {
+    transform: rotate(-45deg) skew(22.5deg, 22.5deg);
+    right: 0;
+    top: 0;
+    width: var(--right-star-size);
+    height: var(--right-star-size);
+}
+
+/* Chat */
+
+.chat-side {
+    width: 100%;
+    background: var(--chat-color);
+    display: grid;
+    grid-template-rows: var(--top-content-row-height) auto;
+    grid-template-columns: auto 22.25rem;
+    grid-template-areas: 
+    "nav-bar nav-bar"
+    " main-part right-side" ;
+}
+
+/* RightColumn */
+
+.right-column {
+    grid-area: right-side;
+    height: var(--top-content-row-height);
+    border-left: 0.5px rgb(66, 70, 77) solid;
+    height: 100%;
+}
+
+/* nav-bar */
+
+.nav-bar {
+    width: 100%;
+    height: var(--top-content-row-height);
+    border-bottom: 1px var(--main) solid;
+    grid-area: nav-bar;
+}
+
+.main-part {
+    width: 100%;
+    height: 100%;
+    height: var(--top-content-row-height);
+    grid-area: main-part;
+    display: block;
+}

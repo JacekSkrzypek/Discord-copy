@@ -1,0 +1,34 @@
+:root {
+  --main: rgb(32, 34, 37);
+  --list-color: rgb(47, 49, 54);
+  --chat-color: rgb(54, 57, 63); /* server icon */
+  --font-color: rgb(142, 146, 151);
+  --element-hover: rgb(60, 63, 69);
+  --logo-color: rgb(220, 221, 222);
+  --discord-violet: rgb(86, 99, 233);
+  --discord-green: rgb(59, 165, 93);
+  --discord-green-hover: rgb(57, 112, 78);
+  --icon-green-hover: rgb(159, 211, 176);
+
+  --top-content-row-height: 2.7rem;
+  --server-list-width: 4.5rem;
+  --server-interface-column: calc(4.5rem * 3.3);
+  --right-column-max: 17.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app
+{
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  background: var(--main);
+  height: 100px;
+}
