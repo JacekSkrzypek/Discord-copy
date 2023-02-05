@@ -1,383 +1,415 @@
 /* Header */
 
 .app-header {
-    height: 1rem;
-    width: 100%;
-    user-select: none;
+  height: 1rem;
+  width: 100%;
+  user-select: none;
 }
 
 .app-header > .app-title {
-    color: var(--font-color);
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-align: center;
-    width: var(--server-list-width);
+  color: var(--font-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  width: var(--server-list-width);
 }
 
 /* Content */
 
 .content {
-    width: 100%;
-    height: calc(100% - 1rem);
-    display: grid;
-    grid-template-columns: var(--server-list-width) var(--server-interface-column) auto;
+  width: 100%;
+  height: calc(100% - 1rem);
+  display: grid;
+  grid-template-columns: var(--server-list-width) var(--server-interface-column) auto;
 }
-
 
 /* ServersList */
 
 .servers-list {
-    width: var(--server-list-width);
-    overflow: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: var(--server-list-width);
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .server-icon {
-    width: 3.3rem;
-    height: 3.3rem;
-    border-radius: 100%;
-    background: var(--chat-color);
-    cursor: pointer;
-    transition: all 0.1s ease;
-    border: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 100%;
+  background: var(--chat-color);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .server-icon:hover {
-    border-radius: 35%;
+  border-radius: 35%;
 }
 
-.server-icon.private
-{
-    margin: 0.4rem 0;
-    position: relative;
+.server-icon.private {
+  margin: 0.4rem 0;
+  position: relative;
 }
 
-.server-icon.private:hover
-{
-    background: var(--discord-violet);
+.server-icon.private:hover {
+  background: var(--discord-violet);
 }
 
 .server-icon::before {
-    content: '';
-    /*height: 70%; ACTIVE */
-    height: 0%;
-    width: 6px;
-    position: absolute;
-    top: 50%;
-    left: -22%;
-    transform: translateY(-50%);
-    background: #fff;
-    border-radius: 20px;
-
+  content: "";
+  /*height: 70%; ACTIVE */
+  height: 0%;
+  width: 6px;
+  position: absolute;
+  top: 50%;
+  left: -22%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 20px;
 }
 
 .server-icon:hover::before {
-    height: 40%;
-    transition: all 0.1s ease;
+  height: 40%;
+  transition: all 0.1s ease;
 }
 
 .server-icon.add-server::before {
-    height: 0%;
+  height: 0%;
 }
 
 .server-icon.private::after {
-    content: '';
-    width: 65%;
-    height: 2px;
-    background: var(--chat-color);
-    position: absolute;
-    bottom: -0.4rem;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  width: 65%;
+  height: 2px;
+  background: var(--chat-color);
+  position: absolute;
+  bottom: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .server-icon.private .logo {
-    color: var(--logo-color);
-    font-size: 1.6rem;
+  color: var(--logo-color);
+  font-size: 1.6rem;
 }
 
 .server-icon.bottom-button {
-    display: block;
+  display: block;
 }
 
 .my-servers {
-    margin-top: 0.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .bottom-button > .icon {
-    color: var(--discord-green);
-    font-size: 1.4rem;
+  color: var(--discord-green);
+  font-size: 1.4rem;
 }
 
 .bottom-button:hover .icon {
-    color: #fff;
+  color: #fff;
 }
 
 .bottom-button:hover {
-    background: var(--discord-green);
+  background: var(--discord-green);
 }
 
 /* Chats */
 
 .chats {
-    height: 100%;
-    background: var(--list-color);
-    width: var(--server-interface-column);
-    user-select: none;
+  height: 100%;
+  background: var(--list-color);
+  width: var(--server-interface-column);
+  user-select: none;
 }
 
 .message-search {
-    height: var(--top-content-row-height);
-    border-bottom: 1px var(--main) solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: var(--top-content-row-height);
+  border-bottom: 1px var(--main) solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .message-search > .search-input {
-    width: 90%;
-    height: 60%;
-    background: var(--main);
-    border: 0px;
-    border-radius: 5px;
-    color: var(--font-color);
-    text-align: start;
-    padding: 0 10px;
-    font-weight: b;
-    cursor: pointer;
+  width: 90%;
+  height: 60%;
+  background: var(--main);
+  border: 0px;
+  border-radius: 5px;
+  color: var(--font-color);
+  text-align: start;
+  padding: 0 10px;
+  font-weight: b;
+  cursor: pointer;
 }
 
 .chats > .option-list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.chats > .option-list
-{
-    color: var(--font-color);
-    padding: 10px;
-    gap: 3px;
+.chats > .option-list {
+  color: var(--font-color);
+  padding: 10px;
+  gap: 3px;
 }
 
 .option-list .option {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 2.3rem;
-    border-radius: 5px;
-    padding:8px;
-    gap: 15px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2.5rem;
+  border-radius: 5px;
+  padding: 8px;
+  gap: 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
 }
 
 .option-list .option p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .option-list .option:hover {
-    background: var(--element-hover);
-    color: #fff;
+  background: var(--element-hover);
+  color: #fff;
 }
 
 .option-list .new-banner {
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    font-size: 0.75rem;
-    transform: translateY(-50%);
-    background: #fff;
-    width: 50px;
-    height: 22px;
-    color: #fff;
-    text-align: center;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right,rgb(136, 74, 192), rgb(165, 89, 147));
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  font-size: 0.75rem;
+  transform: translateY(-50%);
+  background: #fff;
+  width: 50px;
+  height: 22px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(136, 74, 192), rgb(165, 89, 147));
 }
 
 .star {
-    position: absolute;
+  position: absolute;
 }
 
 .star.left-star {
-    width: 10px;
-    height: 10px;
-    left: 0;
-    bottom: 0;
-    transform: translateX(-50%) translateY(50%);
-    }
+  width: 10px;
+  height: 10px;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%);
+}
 
 .star.right-star {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    right: 0;
-    top: 0;
-    transform: translateX(50%) translateY(-50%);
-    }
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0;
+  top: 0;
+  transform: translateX(50%) translateY(-50%);
+}
 
 :root {
-    --left-star-size: 5px;
-    --right-star-size: 7px;
+  --left-star-size: 5px;
+  --right-star-size: 7px;
 }
 
 .star::before,
 .star::after {
-    content: '';
-    background: #fff;
-    position: absolute;
-   
+  content: "";
+  background: #fff;
+  position: absolute;
 }
 
 .star.left-star::before {
-    transform: rotate(45deg) skew(22.5deg, 22.5deg);
-    left: 2px;
-    bottom: 2px;
-    width: var(--left-star-size);
-    height: var(--left-star-size);
-    animation: left-star 4s infinite alternate-reverse;
+  transform: rotate(45deg) skew(22.5deg, 22.5deg);
+  left: 2px;
+  bottom: 2px;
+  width: var(--left-star-size);
+  height: var(--left-star-size);
+  animation: left-star 4s infinite alternate-reverse;
 }
 
 .star.left-star::after {
-    left: 2px;
-    bottom: 2px;
-    width: var(--left-star-size);
-    height: var(--left-star-size);
-    transform: rotate(-45deg) skew(22.5deg, 22.5deg);
-    animation: left-star 4s infinite alternate-reverse;
+  left: 2px;
+  bottom: 2px;
+  width: var(--left-star-size);
+  height: var(--left-star-size);
+  transform: rotate(-45deg) skew(22.5deg, 22.5deg);
+  animation: left-star 4s infinite alternate-reverse;
 }
 
 .star.right-star::before {
-    transform: rotate(45deg) skew(22.5deg, 22.5deg);
-    right: 0;
-    top: 0;
-    width: var(--right-star-size);
-    height: var(--right-star-size);
+  transform: rotate(45deg) skew(22.5deg, 22.5deg);
+  right: 0;
+  top: 0;
+  width: var(--right-star-size);
+  height: var(--right-star-size);
 }
 
 .star.right-star::after {
-    transform: rotate(-45deg) skew(22.5deg, 22.5deg);
-    right: 0;
-    top: 0;
-    width: var(--right-star-size);
-    height: var(--right-star-size);
+  transform: rotate(-45deg) skew(22.5deg, 22.5deg);
+  right: 0;
+  top: 0;
+  width: var(--right-star-size);
+  height: var(--right-star-size);
 }
 
 /* Chat */
 
 .chat-side {
-    width: 100%;
-    background: var(--chat-color);
-    display: grid;
-    grid-template-rows: var(--top-content-row-height) auto;
-    grid-template-columns: auto 22.25rem;
-    grid-template-areas: 
+  width: 100%;
+  background: var(--chat-color);
+  display: grid;
+  grid-template-rows: var(--top-content-row-height) auto;
+  grid-template-columns: auto 22.25rem;
+  grid-template-areas:
     "nav-bar nav-bar"
-    " main-part right-side" ;
+    " main-part right-side";
 }
 
 /* RightColumn */
 
 .right-column {
-    grid-area: right-side;
-    height: var(--top-content-row-height);
-    border-left: 0.5px rgb(66, 70, 77) solid;
-    height: 100%;
+  grid-area: right-side;
+  height: var(--top-content-row-height);
+  border-left: 0.5px rgb(66, 70, 77) solid;
+  height: 100%;
 }
 
 /* nav-bar */
 
 .nav-bar {
-    width: 100%;
-    height: var(--top-content-row-height);
-    border-bottom: 1px var(--main) solid;
-    grid-area: nav-bar;
-    display: flex;
-    justify-content: space-between;
-    color: var(--font-color);
-    font-size: 1rem;
-    padding: 0 1.1rem;
-    user-select: none;
+  width: 100%;
+  height: var(--top-content-row-height);
+  border-bottom: 1px var(--main) solid;
+  grid-area: nav-bar;
+  display: flex;
+  justify-content: space-between;
+  color: var(--font-color);
+  font-size: 1rem;
+  padding: 0 0 0 1.1rem;
+  user-select: none;
+  position: relative;
 }
 
+.nav-bar > .right-side,
 .nav-bar > .left-side {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .nav-bar > .left-side > ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-bar > .left-side > .friends {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.3rem;
-    min-width: 105px;
-    border-right: 1px rgb(66, 70, 77) solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 105px;
+  border-right: 1px rgb(66, 70, 77) solid;
 }
 
 .nav-bar > .left-side > .friends > .icon {
-    color: var(--font-color);
-    font-size: 1.4rem;
+  color: var(--font-color);
+  font-size: 1.4rem;
 }
 
 .nav-bar > .left-side > .friends > .title {
-    color: #fff;
-    font-weight: bold;
+  color: #fff;
+  font-weight: bold;
 }
 
 .nav-bar > .left-side > ul {
-    display: flex;
-    gap: 16px;
-    padding: 1rem;
+  display: flex;
+  gap: 16px;
+  padding: 1rem;
 }
 
 .nav-bar > .left-side .list-element {
-    width: max-content;
-    padding: 1px 6px;
-    font-size: 0.95rem;
-    background: transparent;
-    border: 2px transparent solid;
-    color: var(--font-color);
-    cursor: pointer;
-    border-radius: 4px;
+  width: max-content;
+  padding: 1px 6px;
+  font-size: 0.95rem;
+  background: transparent;
+  border: 2px transparent solid;
+  color: var(--font-color);
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-.nav-bar > .left-side .list-element:hover {
-    color: #fff;
-    background: var(--element-hover-2);
+.nav-bar > .left-side .list-element:hover,
+.nav-bar > .left-side .list-element.active {
+  color: #fff;
+  background: var(--element-hover-2);
+}
+
+.nav-bar .right-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--top-content-row-height);
+  background: var(--chat-color);
+  border-bottom: 1px var(--main) solid;
 }
 
 .nav-bar > .left-side .list-element.add-friend {
-    background: rgb(45, 125, 70);
+  background: rgb(45, 125, 70);
+  color: #fff;
+}
+.nav-bar > .right-side .new-message {
+  padding: 0 1.1rem 0 0;
+  box-shadow: var(--chat-color) -10px 0px 5px 6px;
+  border-right: 1px rgb(66, 70, 77) solid;
+}
+
+.nav-bar > .right-side > .right-buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.1rem;
+}
+
+.nav-bar > .right-side button {
+  background: transparent;
+  border: 0px;
+  font-size: 1.5rem;
+  display: flex;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.nav-bar > .right-side button:hover {
     color: #fff;
 }
 
+/* main-part */
+
 .main-part {
-    width: 100%;
-    height: 100%;
-    height: var(--top-content-row-height);
-    grid-area: main-part;
-    display: block;
+  width: 100%;
+  height: 100%;
+  height: var(--top-content-row-height);
+  grid-area: main-part;
+  display: block;
 }

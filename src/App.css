@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 :root {
   --main: rgb(32, 34, 37);
   --list-color: rgb(47, 49, 54);
@@ -21,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 .app
