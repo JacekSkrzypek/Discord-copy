@@ -7,5 +7,11 @@ export const LANGUAGE = { //English, Polish
     all: ['All', 'Wszystkie'],
     pending: ['Pending', 'Oczekujące'],
     blocked: ['Blocked', 'Zablokowani'],
-    addFriend: ['Add Friend', 'Dodaj znajomego']
+    addFriend: ['Add Friend', 'Dodaj znajomego'],
+    activeNow: ['Active Now', 'Aktywni teraz'],
+    time: {
+        minute: ['m', 'min'],
+        hour: ['h', 'godz']
+    }
 }
+
