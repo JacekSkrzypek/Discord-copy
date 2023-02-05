@@ -3,7 +3,7 @@ import ServerList from './ServersList';
 import './modules.css';
 import Chats from './Chats';
 import ChatSide from './ChatSide/ChatSide';
-import RightColumn from './RightColumn';
+import RightColumn from './ChatSide/RightColumn';
 
 
 const Content = () => {

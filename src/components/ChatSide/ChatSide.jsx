@@ -1,7 +1,8 @@
 import React from 'react';
-import RightColumn from '../RightColumn';
+import RightColumn from './RightColumn';
 import MainPart from './MainPart';
 import Navbar from './Navbar';
+import '../modules.css'
 
 const ChatSide = () => {
     return (

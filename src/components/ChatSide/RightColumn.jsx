@@ -1,5 +1,5 @@
 import React from 'react';
-import './modules.css'
+import '../modules.css'
 
 const RightColumn = () => {
     return (

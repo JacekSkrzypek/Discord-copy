@@ -134,6 +134,7 @@
     height: 100%;
     background: var(--list-color);
     width: var(--server-interface-column);
+    user-select: none;
 }
 
 .message-search {
@@ -306,6 +307,71 @@
     height: var(--top-content-row-height);
     border-bottom: 1px var(--main) solid;
     grid-area: nav-bar;
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-color);
+    font-size: 1rem;
+    padding: 0 1.1rem;
+    user-select: none;
+}
+
+.nav-bar > .left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar > .left-side > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar > .left-side > .friends {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.3rem;
+    min-width: 105px;
+    border-right: 1px rgb(66, 70, 77) solid;
+}
+
+.nav-bar > .left-side > .friends > .icon {
+    color: var(--font-color);
+    font-size: 1.4rem;
+}
+
+.nav-bar > .left-side > .friends > .title {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-bar > .left-side > ul {
+    display: flex;
+    gap: 16px;
+    padding: 1rem;
+}
+
+.nav-bar > .left-side .list-element {
+    width: max-content;
+    padding: 1px 6px;
+    font-size: 0.95rem;
+    background: transparent;
+    border: 2px transparent solid;
+    color: var(--font-color);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.nav-bar > .left-side .list-element:hover {
+    color: #fff;
+    background: var(--element-hover-2);
+}
+
+.nav-bar > .left-side .list-element.add-friend {
+    background: rgb(45, 125, 70);
+    color: #fff;
 }
 
 .main-part {
