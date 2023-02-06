@@ -9,6 +9,10 @@ export const LANGUAGE = { //English, Polish
     blocked: ['Blocked', 'Zablokowani'],
     addFriend: ['Add Friend', 'Dodaj znajomego'],
     activeNow: ['Active Now', 'Aktywni teraz'],
+<<<<<<< HEAD
+    onlineUP: ['ONLINE', 'DOSTĘPNI ONLINE'],
+=======
+>>>>>>> 6917f242288cd0612879386ac1e592f6989a4d80
     time: {
         minute: ['m', 'min'],
         hour: ['h', 'godz']

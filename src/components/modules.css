@@ -441,6 +441,18 @@
   border: 0px;
   transform: translateY(-5%);
 }
+<<<<<<< HEAD
+
+.main-part > .number-of-online-users {
+  color: var(--font-color);
+  font-weight: bold;
+  font-size: 0.8rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+=======
+>>>>>>> 6917f242288cd0612879386ac1e592f6989a4d80
 /* Right Column */
 
 .right-column {
