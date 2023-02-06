@@ -2,17 +2,17 @@ import React from 'react';
 import { useGlobalContext } from '../../context';
 import '../modules.css'
 import { LANGUAGE } from '../../texts';
-import { ACTIVE_NOW_USERS, STATUS_COLOR } from '../../constants';
+import { USERS, STATUS_COLOR } from '../../constants';
 
 const RightColumn = () => {
     const { data } = useGlobalContext();
     const { language } = data;
 
-    console.log(ACTIVE_NOW_USERS)
+    console.log(USERS)
     return (
         <section className='right-column'>
             <h1 className='title'>{LANGUAGE.activeNow[language]}</h1>
-            {ACTIVE_NOW_USERS.map((item) => {
+            {USERS.map((item) => {
                 const {nick, time, profileImage, status, game, icon} = item
                 return (
                 <article className='active-user'>

@@ -12,6 +12,7 @@ export const LANGUAGE = { //English, Polish
     time: {
         minute: ['m', 'min'],
         hour: ['h', 'godz']
-    }
+    },
+    search: ['Search', 'Szukaj']
 }
 
