@@ -14,6 +14,11 @@ export const LANGUAGE = { //English, Polish
         minute: ['m', 'min'],
         hour: ['h', 'godz']
     },
-    search: ['Search', 'Szukaj']
+    search: ['Search', 'Szukaj'],
+    status: [
+        ['Invisiblee', 'Niewidoczny'],
+        ['Online', 'Dostępny'],
+        ['Idle', 'Zaraz wracam'],
+        ['Do Not Disturb', 'Nie przeszkadzać']
+    ]
 }
-

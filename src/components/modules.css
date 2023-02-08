@@ -412,10 +412,22 @@
   height: var(--top-content-row-height);
   grid-area: main-part;
   display: block;
-  padding: 1rem 2rem;
+  padding: 2rem 1em 1rem 1rem;
 }
 
-.main-part > .search-bar-section {
+.main-part .search-aside,
+.main-part .active-user-aside {
+  width: 100%;
+  padding: 0 0.7rem;
+  border-radius: 6px;
+ 
+}
+
+.main-part > .active-user-aside:hover {
+  background: rgb(66, 70, 77);
+}
+
+.main-part > .search-aside > .search-bar-section {
   display: flex;
   align-items: center;
   height: 2rem;
@@ -425,12 +437,12 @@
   gap: 11px;
   justify-content: space-between;
 }
-.main-part > .search-bar-section > .icon {
+.main-part > .search-aside > .search-bar-section > .icon {
   color: var(--font-color);
   font-size: 1.4rem;
 }
 
-.main-part > .search-bar-section > .search-bar {
+.main-part > .search-aside > .search-bar-section > .search-bar {
   width: 100%;
   height: 2rem;
   color: var(--font-color);
@@ -449,18 +461,138 @@
   height: 3.5rem;
   display: flex;
   align-items: center;
+  padding-left: 0.7rem;
 }
+
+.main-part .image-section {
+  position: relative;
+  width: max-content;
+  height: max-content;
+}
+
+.main-part .profile-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: relative;
+}
+.main-part .nick {
+  color: #fff;
+  font-size: 1rem;
+  transform: translateY(-10%);
+}
+
+.main-part .status-title {
+    font-size: 0.8rem;
+    color: var(--font-color);
+}
+
+.main-part .active-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 3.5rem;
+  border-top: 1px rgb(66, 70, 77) solid;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.main-part .active-user:hover {
+  background: rgb(66, 70, 77);
+}
+
+.main-part .status {
+  width: 0.9rem;
+  height: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 2px var(--list-color) solid;
+}
+
+.main-part .active-user .user-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.active-user .user-name .user-id {
+  color: var(--font-color);
+  transform: translateY(-10%);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.active-user:hover .user-name .user-id {
+  display: block;
+}
+
+.main-part .active-user .buttons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+}
+
+.main-part .active-user .button {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--list-color);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  flex-direction: column;
+  cursor: pointer;
+  gap: 2px;
+}
+
+.main-part .active-user:hover .button {
+  background: var(--main);
+}
+
+.main-part .active-user .button:hover {
+  color: #fff;
+}
+
+.main-part .active-user .button .icon {
+  font-size: 1.2rem;
+}
+
+.main-part .active-user .button .circle {
+  width: 0.25rem;
+  height: 0.25rem;
+  background: var(--font-color);
+  border-radius: 50%;
+}
+
+.main-part .button:hover  .circle {
+  background: #fff;
+}
+
+
+
+
 /* Right Column */
 
 .right-column {
     padding: 1rem;
     user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .right-column > .title {
     color: #fff;
     font-size: 1.2rem;
-    margin-bottom: 1.4rem;
+    margin-bottom: 0.4rem;
 }
 
 .right-column .active-user {
@@ -493,6 +625,7 @@
     height: max-content;
     position: relative;
 }
+
 .right-column .active-user .profile-image {
     width: 2rem;
     height: 2rem;

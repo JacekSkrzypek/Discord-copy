@@ -9,7 +9,6 @@ export const AppProvider = ({children}) => {
 
     const countOnlineUsers = () => {
         const onlineUsers = USERS.filter((user) => user.status != 0);
-        console.log('asdadsdsa');
         return onlineUsers.length;
     }
 
