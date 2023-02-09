@@ -6,7 +6,7 @@ export const USERS = [
         game: 'Minecraft',
         icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png',
         time: [2, LANGUAGE.time.hour],
-        status: 1,
+        status: 0,
         profileImage: 'https://www.publicdomainpictures.net/pictures/30000/nahled/peacock-in-profile.jpg',
         userID: '#4522'
     },
@@ -24,7 +24,7 @@ export const USERS = [
         game: 'Minecraft',
         icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png',
         time: [2, LANGUAGE.time.hour],
-        status: 1,
+        status: 2,
         profileImage: 'https://www.publicdomainpictures.net/pictures/30000/nahled/peacock-in-profile.jpg',
         userID: '#4522'
     },
@@ -33,10 +33,12 @@ export const USERS = [
         game: 'Minecraft',
         icon: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/minecraft_logo_icon_168974.png',
         time: [2, LANGUAGE.time.hour],
-        status: 1,
+        status: 3,
         profileImage: 'https://www.publicdomainpictures.net/pictures/30000/nahled/peacock-in-profile.jpg',
         userID: '#4522'
     }
 ];
 
-export const STATUS_COLOR = ['gray', '#3BA53B'];
+export const STATUS_COLOR = ['#2F3136', '#3BA53B', '#FFA619', '#ED4245'];
+
+export const STATUS_NAMES = ['offline', 'online', 'idle', 'do-not-disturb'];

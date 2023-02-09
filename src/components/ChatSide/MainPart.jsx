@@ -4,8 +4,8 @@ import { useGlobalContext } from "../../context";
 import { LANGUAGE } from "../../texts";
 import { BiSearch } from "react-icons/bi";
 import { USERS } from "../../constants";
-import { STATUS_COLOR } from "../../constants";
 import { MdMessage } from 'react-icons/md'
+import UserStatus from "../UserStatus";
 
 
 const MainPart = () => {
@@ -30,16 +30,13 @@ const MainPart = () => {
       </h1>
       {USERS.map((user) => {
         const { nick, profileImage, status, userID} = user;
-        if (user.status != 0) {
+        if (status != 0) {
           return (
             <aside className="active-user-aside">
             <article className='active-user'>
               <div className="image-section">
                 <img src={profileImage} alt={nick} className="profile-image" />
-                <div
-                  className="status"
-                  style={{ background: STATUS_COLOR[status] }}
-                ></div>
+                <UserStatus status={status}/>
               </div>
               <div className="information">
                 <div className="user-name">

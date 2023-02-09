@@ -5,7 +5,6 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
     const [language, setLanguage] = useState(0); //0 - English 1 - Polish
-    const [numberOfOnline, setNumberOfOnline] = useState(0);
 
     const countOnlineUsers = () => {
         const onlineUsers = USERS.filter((user) => user.status != 0);

@@ -16,7 +16,7 @@ export const LANGUAGE = { //English, Polish
     },
     search: ['Search', 'Szukaj'],
     status: [
-        ['Invisiblee', 'Niewidoczny'],
+        ['Invisible', 'Niewidoczny'],
         ['Online', 'Dostępny'],
         ['Idle', 'Zaraz wracam'],
         ['Do Not Disturb', 'Nie przeszkadzać']

@@ -3,6 +3,7 @@ import { useGlobalContext } from "../../context";
 import "../modules.css";
 import { LANGUAGE } from "../../texts";
 import { USERS, STATUS_COLOR } from "../../constants";
+import UserStatus from "../UserStatus";
 
 const RightColumn = () => {
   const {
@@ -14,15 +15,13 @@ const RightColumn = () => {
       <h1 className="title">{LANGUAGE.activeNow[language]}</h1>
       {USERS.map((item, key) => {
         const { nick, time, profileImage, status, game, icon } = item;
+        if(game !== undefined && status !== 0) {
         return (
           <article key={key} className="active-user">
             <div className="left-side">
               <div className="image-section">
                 <img src={profileImage} alt={nick} className="profile-image" />
-                <div
-                  className="status"
-                  style={{ background: STATUS_COLOR[status] }}
-                ></div>
+                <UserStatus status={status} />
               </div>
               <div className="information">
                 <h2 className="nick">{nick}</h2>
@@ -34,7 +33,7 @@ const RightColumn = () => {
             </div>
             <img src={icon} alt={game} className="game-icon" />
           </article>
-        );
+        );}
       })}
     </section>
   );
